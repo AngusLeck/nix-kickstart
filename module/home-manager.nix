@@ -1,6 +1,7 @@
 # Find packages here: 
 # https://nix-community.github.io/home-manager/options.xhtml
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     neovim
     docker
@@ -10,22 +11,22 @@
     aws-vault
     awscli2
     yarn
+    node
   ];
 
   home.stateVersion = "23.11";
-  nixpkgs.config.allowUnfree = true;
 
   programs = {
-    /* SHELL */
+    # SHELL
     zsh = {
       enable = true;
       enableCompletion = true;
-      enableAutosuggestions = true; 
+      enableAutosuggestions = true;
       completionInit = "autoload -Uz compinit && compinit";
       initExtra = ''
-      ${builtins.readFile ../config/zsh/alias.zsh};
-      ${builtins.readFile ../config/zsh/functions.zsh};
-      ${builtins.readFile ../config/zsh/setup.zsh};
+        ${builtins.readFile ../config/zsh/alias.zsh};
+        ${builtins.readFile ../config/zsh/functions.zsh};
+        ${builtins.readFile ../config/zsh/setup.zsh};
       '';
       envExtra = ''
         alias ailo-tools="nix run git+ssh://git@github.com/ailohq/ailo-tools.git --tarball-ttl 68400"
@@ -37,7 +38,9 @@
 
     git = {
       enable = true;
-      aliases = {};
+      aliases = { };
+      userEmail = "<email>";
+      userName = "<name>";
       extraConfig = {
         # https://www.youtube.com/watch?v=aolI_Rz0ZqY
         rerere = {
@@ -46,26 +49,29 @@
         column.ui = "auto";
         branch.sort = "-committerdate";
         # https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only
-        pull = { 
-          ff =  "only";
+        pull = {
+          ff = "only";
         };
       };
     };
 
-    direnv = { 
+    direnv = {
       enable = true;
       enableZshIntegration = true;
-      nix-direnv.enable = true; 
+      nix-direnv.enable = true;
     };
 
-    /* PROMPT */
+    # PROMPT
     starship = {
       enable = true;
       enableZshIntegration = true;
+      settings = {
+        add_newline = false;
+      };
     };
 
     vscode = {
       enable = true;
-    }; 
+    };
   };
 }
