@@ -19,7 +19,7 @@
     }:
     let
       darwin-system = import ./system/darwin.nix { inherit inputs username; };
-      username = throw "<enter username in flake.nix>"; # TODO: replace with user name and remove throw
+      username = "angusleck";
     in
     {
       darwinConfigurations = {
