@@ -40,14 +40,14 @@
       conflicted = "⚔️ ";
       ahead = "$\{count\}a ";
       behind = "$\{count\}b ";
-      diverged = "diverged: $\{ahead_count\}a $\{behind_count\}b";
+      diverged = "diverged: $\{ahead_count\}a $\{behind_count\}b ";
       untracked = "[$\{count\}ut ](bold grey)";
       stashed = "$count📂 ";
       staged = "[$\{count\}s ](bold blue)";
       modified = "[$\{count\}m ](bold yellow)";
       renamed = "[$\{count\}r ](bold yellow)";
       deleted = "[$\{count\}d ](bold red)";
-      format = "$all_status$ahead_behind";
+      format = "$all_status$ahead_behind ";
     };
 
     battery = {
