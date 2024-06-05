@@ -47,7 +47,7 @@
       modified = "[$\{count\}m ](bold yellow)";
       renamed = "[$\{count\}r ](bold yellow)";
       deleted = "[$\{count\}d ](bold red)";
-      format = "$all_status$ahead_behind ";
+      format = "$all_status$ahead_behind";
     };
 
     battery = {
