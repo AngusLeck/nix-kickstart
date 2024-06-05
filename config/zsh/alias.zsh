@@ -1,6 +1,6 @@
 alias dstop='docker stop $(docker ps -aq)'
 alias killport='findandkill'
-alias a='~/ailo'
+alias a='cd ~/ailo/$(ls ~/ailo | fzf)'
 alias now='date +%Y%m%d%H%M%S'
 alias ben='echo "$*" | gpt-term'
 alias how='ben how'
