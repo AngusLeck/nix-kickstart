@@ -8,7 +8,6 @@
     ${builtins.readFile ./setup.zsh}
     ${builtins.readFile ./functions.zsh}
     ${builtins.readFile ./alias.zsh}
-    ${if builtins.findFile ./.secret.zsh ? isNull then "" else builtins.readFile ./.secret.zsh}
   '';
   envExtra = ''
     alias ailo-tools="nix run git+ssh://git@github.com/ailohq/ailo-tools.git --tarball-ttl 68400"

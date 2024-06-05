@@ -14,7 +14,7 @@
     gh
     nil
     python39
-    rbenv
+    direnv
   ];
 
   home.stateVersion = "23.11";
