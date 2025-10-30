@@ -13,8 +13,10 @@
     yarn
     gh
     nil
-    python39
     direnv
+    aha
+    yq
+    gum
   ];
 
   home.stateVersion = "23.11";

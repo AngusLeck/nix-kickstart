@@ -9,14 +9,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
   };
 
-  outputs =
-    inputs@{
-      self,
-      darwin,
-      home-manager,
-      nixpkgs,
-      ...
-    }:
+  outputs = inputs@{ self, darwin, home-manager, nixpkgs, ... }:
     let
       darwin-system = import ./system/darwin.nix { inherit inputs username; };
       username = "angusleck";
