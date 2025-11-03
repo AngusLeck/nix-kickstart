@@ -1,5 +1,6 @@
 {
   nix = {
+    enable = false;
     settings = {
       auto-optimise-store = true;
       builders-use-substitutes = true;
@@ -15,4 +16,5 @@
   };
   programs.zsh.enable = true;
   nixpkgs.config.allowUnfree = true;
+  system.stateVersion = 6;
 }

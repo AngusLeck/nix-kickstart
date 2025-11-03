@@ -19,7 +19,8 @@
     gum
   ];
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "25.05";
+  # home.enableNixpkgsReleaseCheck = false;
 
   programs = {
     zsh = import ../config/zsh/zsh.nix;

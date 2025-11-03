@@ -10,7 +10,7 @@ inputs.darwin.lib.darwinSystem {
     system-config
     inputs.home-manager.darwinModules.home-manager
     {
-      services.nix-daemon.enable = true;
+      # services.nix-daemon.enable = true;
       users.users.${username}.home = "/Users/${username}";
     }
     {
@@ -18,6 +18,6 @@ inputs.darwin.lib.darwinSystem {
       home-manager.useUserPackages = true;
       home-manager.users."${username}" = home-manager-config;
     }
-    { security.pam.enableSudoTouchIdAuth = true; }
+    # { security.pam.enableSudoTouchIdAuth = true; }
   ];
 }
