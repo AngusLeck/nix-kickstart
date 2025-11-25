@@ -1,9 +1,9 @@
 {
   enable = true;
-  aliases = { };
-  userEmail = "aleck42@gmail.com";
-  userName = "angus leck";
-  extraConfig = {
+  settings = {
+    alias = { };
+    user.email = "aleck42@gmail.com";
+    user.name = "angus leck";
     rerere = {
       enabled = true;
     };

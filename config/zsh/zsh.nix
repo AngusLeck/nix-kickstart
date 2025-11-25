@@ -1,7 +1,7 @@
 {
   enable = true;
   enableCompletion = true;
-  enableAutosuggestions = true;
+  autosuggestion.enable = true;
   autocd = true;
   completionInit = "autoload -Uz compinit && compinit";
   history = {
@@ -9,7 +9,7 @@
     save = 10000;
     path = "$HOME/.zsh_history";
   };
-  initExtra = ''
+  initContent = ''
     # History options
     mkdir -p "$(dirname "$HOME/.zsh_history")"
     setopt HIST_FCNTL_LOCK
