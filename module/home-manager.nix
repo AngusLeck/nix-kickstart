@@ -11,6 +11,7 @@
     aws-vault
     awscli2
     yarn
+    git
     gh
     nil
     direnv
