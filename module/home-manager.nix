@@ -12,6 +12,7 @@
     awscli2
     yarn
     git
+    (python3.withPackages (ps: [ ps.setuptools ]))
     gh
     nil
     direnv
@@ -21,6 +22,9 @@
   ];
 
   home.stateVersion = "25.05";
+  home.sessionPath = [
+    "/Applications/ChatGPT.app/Contents/Resources"
+  ];
   # home.enableNixpkgsReleaseCheck = false;
 
   programs = {
